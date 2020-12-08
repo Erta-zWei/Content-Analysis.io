@@ -5,3 +5,5 @@ Do not know where to improve to earn customers? How about starting with what you
 This tool identifies categories that your customers obviously like or dislike. By classifying identified issues in reviews, you know which part of your business does the best or unfortunately the worst by mentions in reviews. 
 
 The sample model here is used to identify issues in low-rating reviews, but it is adaptable to identify issues in any rating reviews, such as good experience in high-rating review, etc.
+
+See __Content Analysis.html__ for details.
