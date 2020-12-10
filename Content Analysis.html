@@ -13122,7 +13122,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Lukes Lobster.csv&#39;</span><span class="p">)</span>
@@ -13154,7 +13154,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">low_rating</span> <span class="o">=</span> <span class="n">res</span><span class="p">[</span><span class="n">res</span><span class="p">[</span><span class="s1">&#39;Rating&#39;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">]</span>
@@ -13198,7 +13198,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#calculate average rating of all reviews</span>
@@ -13249,7 +13249,7 @@ Portion of low-rating reviews: 352 / 1767 ( 0.2 )
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">low_rating</span> <span class="o">=</span> <span class="n">low_rating</span><span class="p">[</span><span class="n">low_rating</span><span class="p">[</span><span class="s1">&#39;review length&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="n">low_review_avg</span><span class="p">]</span>
@@ -13292,7 +13292,7 @@ Portion of low-rating reviews: 352 / 1767 ( 0.2 )
 <span class="n">low_rating</span><span class="p">[</span><span class="s1">&#39;Other Reasons in Details&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1">#Classify all criterias mentioned in a review</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">67</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">low_rating</span><span class="p">)):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">low_rating</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span> 
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You are reviewing the&#39;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;/&quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">low_rating</span><span class="p">),</span> <span class="s1">&#39;customer reviews.&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>   
@@ -13352,6 +13352,74 @@ Portion of low-rating reviews: 352 / 1767 ( 0.2 )
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> 
+You are reviewing the 1 / 127 customer reviews.
+ 
+*NEEDS CUSTOMERS SERVICE TRAINING*Perhaps I went in on a bad time for the staff but my visit left me with a &#34;I don&#39;t know if I&#39;ll ever come back&#34; thought. I was so excited to try this spot, the lobster rolls are truly AMAZING. I entered Luke&#39;s happy, I said &#34;hi! Good afternoon&#34; to the 2 gentlemen who where behind the counter, none of them answered. The man who took my order was very short and overall looked as if he was in a crappy mood. There was no welcoming feeling, no &#34;hi&#34; no &#34;thank you&#34; nothing. A straight &#34;what are you going to order&#34; &amp; &#34;your total is etc.&#34; Would I come back? Maybe, (the rolls are delicious) but if I do, I will order pick up and save myself the awkward service.
+ 
+Criterias are numbered as below:
+ 
+1 = Bad Service at Table/Counter, 2 = Bad Food，3 = Long Wait for Food at Table/Counter, 4 = Lack of Menu Diversity, 5 = Overpriced for Portion, 6 = Customer Will Return, 7 = Bad Environment/Decorations/Dirty, 8 = Long Wait for Ordering or Table/Bad Hospitality at Entraince/Counter, 9 = Other Reasons that Needs to be Addressed
+What Criteria(s)? [example: 1235]: 8
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/opt/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py:671: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self._setitem_with_indexer(indexer, value)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> 
+You are reviewing the 2 / 127 customer reviews.
+ 
+Went here bc we were just walking around and ran into the place. I give this place a 3/5 because if i compare it to the other lobster roll i had while in Boston, this one is inferior. I would recommend if you plan to eat here to maybe order it without the butter or half butter if possible. The butter makes it hard to eat. I ordered the three rolls they had: crab, shrimp, and lobster. They all had the same flavor overall, i did not finish my crab roll bc the butter taste was just too overwhelming. The service i had was really weird. The cashier took literally 15 minutes just to check me out i don&#39;t know what the issue was or why he was having so much trouble. I paid cash and he later came to my table asking for the credit card receipt i was suppose to sign? Idk.
+ 
+Criterias are numbered as below:
+ 
+1 = Bad Service at Table/Counter, 2 = Bad Food，3 = Long Wait for Food at Table/Counter, 4 = Lack of Menu Diversity, 5 = Overpriced for Portion, 6 = Customer Will Return, 7 = Bad Environment/Decorations/Dirty, 8 = Long Wait for Ordering or Table/Bad Hospitality at Entraince/Counter, 9 = Other Reasons that Needs to be Addressed
+What Criteria(s)? [example: 1235]: 21
+ 
+You are reviewing the 3 / 127 customer reviews.
+ 
+Ok.. When I write this review, I am not trying to be rude or anything but I really did feel confused when I came here. Our trip was coming to an end and thought we would swing by here since it had such good reviews. We&#39;ve been in Boston for 5 days now and we have already tried two different Lobster Rolls at two different spots. Both spots did not impress us at all since we&#39;ve heard nothing but amazing things about these lobster rolls that are famous in Boston.I walked in and thought the decor was very inviting. I took a look at the menu and there wasn&#39;t much there to read, only a few items to choose from. I ordered the Lobster combo (comes with a side of Soup and a drink), price was $27. There was an option to upgrade to the &#34;Jumbo Roll&#34; for an extra $6.50. My wife never likes to eat an entire sandwich and thought it would be perfect for us to split (she would eat half and I would eat the other). SOOO I upgraded to &#34;Jumbo Roll&#34;... Man, was I disappointed with what they brought out. They brought out the same size sandwich I had at the other two spots. So, of course I had to ask if this was correct. They told me that was in fact the &#34;jumbo roll&#34;. I kept thinking to myself, no way in the world this could be it, it was the same damn size. What it boiled down to was the &#34;normal&#34; size is about half the bread and only 4 ounces of Lobster. The jumbo size (normal to me) was the normal size bread (about two inches bigger), and it comes with 2 more ounces of meat, totally 6 ounces of Lobster. No where in this place is this explained nor are there any examples of sizes for which these come in when you order. My wife and I would have never ordered the jumbo if we had even the slightest clue. Lesson learned I guess..... Wife ended up ordering a large portion of Clam Chowder for $10.. $10!!!! I understand Boston is known for the sea food and such, but hot damn that was expensive for a little bit larger than a cup of clam chowder. Either way, she ordered it and ate it. It was good (I had the smaller portion with my combo). We ended up spending $47 for what appeared to be a semi-fast food restaurant. I am not too worried about the money but wasn&#39;t expecting that what so ever. I gave them 3 stars because even though the sandwich wasn&#39;t what I considered to be &#34;Jumbo&#34;, it was the best one I had in Boston!!I just feel maybe they could be a bit better in explaining exactly what &#34;jumbo&#34; means on their menu. And I feel their prices are a bit higher all around.  If you&#39;re looking for Clam Chowder, order it at a restaurant and its going to be better quality and a couple dollars cheaper (depending on the dining place of course, fine dining which Lukes Lobster is not, it will probably be around the same price or more). If you&#39;re looking for one of the best Lobster Rolls I&#39;ve tasted (that&#39;s a total of 3 my entire life LOL), come here and get the Roll ONLY!!
+ 
+Criterias are numbered as below:
+ 
+1 = Bad Service at Table/Counter, 2 = Bad Food，3 = Long Wait for Food at Table/Counter, 4 = Lack of Menu Diversity, 5 = Overpriced for Portion, 6 = Customer Will Return, 7 = Bad Environment/Decorations/Dirty, 8 = Long Wait for Ordering or Table/Bad Hospitality at Entraince/Counter, 9 = Other Reasons that Needs to be Addressed
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13450,19 +13518,6 @@ Upon this point, manager could decide which criteria to improve for the purpose 
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
 </div>
 </div>
 
